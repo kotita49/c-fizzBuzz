@@ -6,20 +6,23 @@ namespace c_FizzBuzz
     {
         static void Main(string[] args)
         {
-            int i=0;
-            while(i<100){
-                i++;
+            for (int i = 1; i <= 100; i++)  
+{ 
+    string print = "";
                  if(i%3==0){
-            Console.WriteLine("Fizz");
-            }else{
-        Console.WriteLine(i);
+                     print += "Fizz";
+            } if(i%5==0){
+                print += "Buzz";
+            }if(print.Length == 0){
+                print = i.ToString();
             }
-            }
-           
         
+            Console.WriteLine(print);
+            }
+                 
         }
         
-            
-        }
     }
+        }
+    
 
