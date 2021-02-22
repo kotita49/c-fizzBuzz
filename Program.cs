@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace c_FizzBuzz
 {
@@ -6,29 +7,49 @@ namespace c_FizzBuzz
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i <= 100; i++)  
-{ 
-    string print = "";
-    
-    if(i%3==0){
-     print += "Fizz";
-            } if(i%5==0){
-                print += "Buzz";
-            }if(i%7==0){
-                print+= "Bang";
-            }if(i%11==0){
-        print = "Bong";
+            for (int i = 1; i <= 200; i++)
+            {
+                List<string> print = new List<string>();
+                if (i % 3 == 0)
+                {
+                    print.Add("Fizz");
+                }
+                if (i % 5 == 0)
+                {
+                    print.Add("Buzz");
+                }
+                if (i % 7 == 0)
+                {
+                    print.Add("Bang");
+                }
+                if (i % 11 == 0)
+                {
+                    print.Add("Bong");
+                }
+                if (i % 13 == 0)
+                {
+                    for (var j = 0; j < print.Count; j++)
+                    {
+                        if (print[j].StartsWith("B") && i % 13 == 0)
+                        {
+                            print.Insert(j, "Fezz");
+                            break;
+                        }
+                        if (j == print.Count - 1)
+                        {
+                            print.Add("Fezz");
+                            break;
+                        }
+                    }
+               
+                }
+                 if (print.Count == 0)
+                    {
+                        print.Add(i.ToString());
+                    }
+                String newPrint = String.Join("", print);
+                    Console.WriteLine (newPrint);
             }
-            if(print.Length == 0){
-                print = i.ToString();
-            }
-        
-            Console.WriteLine(print);
-            }
-                 
         }
-        
     }
-        }
-    
-
+}
