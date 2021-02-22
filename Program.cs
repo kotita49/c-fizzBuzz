@@ -6,7 +6,20 @@ namespace c_FizzBuzz
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int i=0;
+            while(i<100){
+                i++;
+                 if(i%3==0){
+            Console.WriteLine("Fizz");
+            }else{
+        Console.WriteLine(i);
+            }
+            }
+           
+        
+        }
+        
+            
         }
     }
-}
+
