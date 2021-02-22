@@ -5,9 +5,12 @@ namespace c_FizzBuzz
 {
     class Program
     {
+     
         static void Main(string[] args)
         {
-            for (int i = 1; i <= 200; i++)
+            Console.WriteLine("Please enter a number");
+        int num = Int32.Parse(Console.ReadLine());
+            for (int i = 1; i <= num; i++)
             {
                 List<string> print = new List<string>();
                 if (i % 3 == 0)
@@ -41,14 +44,13 @@ namespace c_FizzBuzz
                             break;
                         }
                     }
-               
                 }
-                 if (print.Count == 0)
-                    {
-                        print.Add(i.ToString());
-                    }
+                if (print.Count == 0)
+                {
+                    print.Add(i.ToString());
+                }
                 String newPrint = String.Join("", print);
-                    Console.WriteLine (newPrint);
+                Console.WriteLine(newPrint);
             }
         }
     }
