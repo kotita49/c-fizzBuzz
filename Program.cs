@@ -13,7 +13,10 @@ namespace c_FizzBuzz
                      print += "Fizz";
             } if(i%5==0){
                 print += "Buzz";
-            }if(print.Length == 0){
+            }if(i%7==0){
+                print+= "Bang";
+            }
+            if(print.Length == 0){
                 print = i.ToString();
             }
         
